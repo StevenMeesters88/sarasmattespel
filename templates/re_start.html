@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+
+    <h1 style="text-align: center;">Börjar om spelet!</h1>
+
+    <img class="logo_center" src="{% static 'counter2.gif' %}" style="width:120px;height:120px;">
+
+ <script>
+       setTimeout(function(){
+            window.location.href = "{% url 'index' %}";
+         }, 3000);
+   </script>
+
+{% endblock content %}

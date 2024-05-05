@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<h1 style="text-align: center; font-size: 80px;">{{one}} + {{two}} = </h1>
+
+    <div style="text-align: center;">
+        <form method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+                {{ field }}
+            {% endfor %}
+            <br><br>
+            <button class="button" type="submit">Svara</button>
+        </form>
+    </div>
+
+<br><br>
+
+<p>
+    Totalt svarat: {{ tot_svar }} <br>
+    Totalt rätt: {{ tot_corr }} <br>
+    <button type="button" class="button" onclick="location.href='{% url 're_start' %}'">Börja om</button>
+</p>
+
+
+
+{% endblock content %}

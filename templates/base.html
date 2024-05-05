@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>base</title>
+    <style>
+        .logo_center { text-align };
+
+        .center {text-align: center};
+
+        .float-container {
+            border: 3px solid #fff;
+            padding: 20px;
+        }
+
+        .float-child {
+            width: 25%;
+            float: left;
+            padding: 20px;
+        }
+
+        .logo_center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+<body>
+
+<img class="logo_center" src="{% static 'mainLogo.jpeg' %}", width="40%">
+<p style="color: pink; text-align: center; font-size: 25px;">Saras mattespel &hearts;</p>
+
+{% block content %}
+
+{% endblock content %}
+
+</body>
+</html>
